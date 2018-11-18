@@ -3,6 +3,8 @@
 # and the second function to write a function that inverts a matrix.
 # As matrix operations are expensive, the second function should cache the inverted matrix.
 
+## The exercise requires an understanding of lexical scoping and simple matrices
+
 ## This is the function that makes a matrix object
 
 makeCacheMatrix <- function(x = matrix()) {
