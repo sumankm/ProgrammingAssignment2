@@ -39,3 +39,42 @@ cacheSolve <- function(x, ...) {
 
 }
 
+
+
+
+
+## Here is how it works
+## --------------------
+
+# First we define an invertible matrix in m0
+# --------------------------------------------
+# > m0 <- matrix(c(4,2,7,6), nrow=2, ncol=2)
+# > m0
+#      [,1] [,2]
+# [1,]    4    7
+# [2,]    2    6
+
+
+
+# Next, we initialize a matrix object
+# -----------------------------------
+# > m1 <- makeCacheMatrix(m0)
+
+
+# Now we can calculate the inverse
+# --------------------------------
+# > cacheSolve(m1)
+#      [,1] [,2]
+# [1,]  0.6 -0.7
+# [2,] -0.2  0.4
+
+
+# If we calculate the inverse the second time,
+# it fetches the result from the cache!!
+# --------------------------------------------
+# > cacheSolve(m1)
+# Fetching cached inverse matrix ...
+#      [,1] [,2]
+# [1,]  0.6 -0.7
+# [2,] -0.2  0.4
+# >
